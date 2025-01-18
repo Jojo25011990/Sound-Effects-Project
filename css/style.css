@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+@media (max-width: 620px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, sans-serif;
+  overflow: hidden;
+}
+
+.heading__primary {
+  width: 80rem;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  letter-spacing: -0.1rem;
+  background-clip: text;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 6.5rem;
+  font-weight: bold;
+}
+@media (max-width: 450px) {
+  .heading__primary {
+    font-size: 5rem;
+  }
+}
+.heading__primary::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#0093e9 63%, #80d0c7 95%);
+  color: transparent;
+  background-clip: text;
+}
+
+.buttons {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-image: linear-gradient(to right, #77a1d3 0%, #79cbca 51%, #77a1d3 100%);
+  background-size: 200% auto;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem;
+  padding: 1.5rem 3rem;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem #eee;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  background-position: right center;
+}
+
+.text {
+  width: 100%;
+  font-size: 3rem;
+  font-style: italic;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 510px) {
+  .text {
+    bottom: 10%;
+  }
+}
